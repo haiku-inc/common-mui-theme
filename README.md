@@ -19,12 +19,10 @@ Add dependency to `common-mui-theme` in a project `package.json`:
 
 Now you can run `npm install`, which should install private repository `common-mui-theme`.
 
-Add to `tsconfig.json`:
+Update `tsconfig.json`. Add `"node_modules/common-mui-theme/**/*"` to the `include`. For example:
 
 ```json
-  "files": [
-    "node_modules/common-mui-theme/index.ts"
-  ]
+  "include": ["src", "node_modules/common-mui-theme/**/*"],
 ```
       
 Wrap React root App with `ThemeProvider` with the imported `theme`:
