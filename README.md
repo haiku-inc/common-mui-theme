@@ -17,7 +17,12 @@ Add dependency to `common-mui-theme` in a project `package.json`:
 "common-mui-theme": "git+https://x-oauth-basic@github.com/haiku-inc/common-mui-theme.git#main"
 ```
 
-Now you can run `npm install`, which should install private repository `common-mui-theme`.
+or if you want to depend on exact version:
+```json
+"common-mui-theme": "git+https://x-oauth-basic@github.com/haiku-inc/common-mui-theme.git#0.0.3"
+```
+
+Now you can run `npm install`, which should install private repository `common-mui-theme`. Later you need to use `npm update` even after updating the tag version, because this dependency is not semver.
 
 Update `tsconfig.json`. Add `"node_modules/common-mui-theme/**/*"` to the `include`. For example:
 
