@@ -21,3 +21,27 @@ declare module '@mui/material/styles/createPalette' {
     blueGrey?: ColorPartial;
   }
 }
+
+declare module '@mui/material/styles/createTheme' {
+  interface Theme {
+    palette: {
+      indigo?: ColorPartial;
+      deepPurple?: ColorPartial;
+      amber?: ColorPartial;
+      orange?: ColorPartial;
+      pink?: ColorPartial;
+      deepOrange?: ColorPartial;
+      green?: ColorPartial;
+      red?: ColorPartial;
+      lightgreen?: ColorPartial;
+      purple?: ColorPartial;
+      lime?: ColorPartial;
+      lightblue?: ColorPartial;
+      yellow?: ColorPartial;
+      cyan?: ColorPartial;
+      teal?: ColorPartial;
+      blue?: ColorPartial;
+      blueGrey?: ColorPartial;
+    }
+  }
+}
