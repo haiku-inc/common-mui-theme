@@ -1,4 +1,38 @@
+import React from "react";
 import { createTheme } from '@mui/material/styles';
+import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
+import { LinkProps } from '@mui/material/Link';
+
+const LinkBehavior = React.forwardRef<
+  HTMLAnchorElement,
+  Omit<RouterLinkProps, 'to'> & { href: RouterLinkProps['to'] }
+>((props, ref) => {
+  const { href, ...other } = props;
+  // Map href (Material UI) -> to (react-router)
+  return <RouterLink ref={ref} to={href} {...other} />;
+});
+
+const fontsDefault = [
+  '-apple-system',
+  'BlinkMacSystemFont',
+  '"Segoe UI"',
+  'Roboto',
+  '"Helvetica Neue"',
+  'Arial',
+  'sans-serif',
+  '"Apple Color Emoji"',
+  '"Segoe UI Emoji"',
+  '"Segoe UI Symbol"',
+]
+const fontsCairo = [
+  'Cairo',
+  ...fontsDefault,
+].join(',');
+
+const fontsOrbitron = [
+  'Orbitron',
+  ...fontsDefault,
+].join(',');
 
 const theme = createTheme({
   palette: {
@@ -394,8 +428,60 @@ const theme = createTheme({
   components: {
     MuiSnackbar: {
 
-    }
-  }
+    },
+    MuiLink: {
+      defaultProps: {
+        component: LinkBehavior,
+      } as LinkProps,
+    },
+    MuiButtonBase: {
+      defaultProps: {
+        LinkComponent: LinkBehavior,
+      },
+    },
+  },
+  typography: {
+    h1: {
+      fontFamily: fontsOrbitron,
+    },
+    h2: {
+      fontFamily: fontsOrbitron,
+    },
+    h3: {
+      fontFamily: fontsOrbitron,
+    },
+    h4: {
+      fontFamily: fontsOrbitron,
+    },
+    h5: {
+      fontFamily: fontsOrbitron,
+    },
+    h6: {
+      fontFamily: fontsOrbitron,
+    },
+    subtitle1: {
+      // fontFamily: fontsCairo,
+    },
+    subtitle2: {
+      // fontFamily: fontsCairo,
+    },
+    body1: {
+      // fontFamily: fontsCairo,
+    },
+    body2: {
+      // fontFamily: fontsCairo,
+    },
+    button: {
+      fontFamily: fontsOrbitron,
+    },
+    caption: {
+      fontFamily: fontsOrbitron,
+    },
+    overline: {
+      fontFamily: fontsOrbitron,
+    },
+    fontFamily: fontsCairo,
+  },
 });
 
 export default theme;
