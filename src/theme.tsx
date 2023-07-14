@@ -448,6 +448,16 @@ const theme = createTheme({
         }
       }
     },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          background: "#0C0F25",
+          "&:hover": {
+            background: "#0F1C28",
+          }
+        }
+      }
+    },
     MuiLink: {
       defaultProps: {
         component: LinkBehavior,
@@ -493,7 +503,6 @@ const theme = createTheme({
     },
     button: {
       fontFamily: fontsOrbitron,
-      background: "#0C0F25",
     },
     caption: {
       fontFamily: fontsOrbitron,
