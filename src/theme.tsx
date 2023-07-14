@@ -2,6 +2,8 @@ import React from "react";
 import { createTheme } from '@mui/material/styles';
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 import { LinkProps } from '@mui/material/Link';
+import {ColorPartial, PaletteOptions} from "@mui/material/styles/createPalette";
+import {ThemeOptions} from "@mui/material/styles/createTheme";
 
 const LinkBehavior = React.forwardRef<
   HTMLAnchorElement,
@@ -33,6 +35,13 @@ const fontsOrbitron = [
   'Orbitron',
   ...fontsDefault,
 ].join(',');
+
+interface IndigoPalette extends PaletteOptions {
+  indigo?: ColorPartial;
+}
+interface IndigoTheme extends ThemeOptions {
+  palette?: IndigoPalette;
+}
 
 const theme = createTheme({
   palette: {
@@ -494,6 +503,6 @@ const theme = createTheme({
     },
     fontFamily: fontsCairo,
   },
-});
+} as IndigoTheme);
 
 export default theme;
