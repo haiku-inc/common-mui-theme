@@ -429,6 +429,16 @@ const theme = createTheme({
     MuiSnackbar: {
 
     },
+    MuiButton: {
+      styleOverrides: {
+        contained: {
+          background: "linear-gradient(180deg, #0CB0A5 0%, #11787E 100%)",
+          "&:hover": {
+            background: "linear-gradient(180deg, #0CB0A5CC 0%, #11787ECC 100%)",
+          }
+        }
+      }
+    },
     MuiLink: {
       defaultProps: {
         component: LinkBehavior,
@@ -446,6 +456,7 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: fontsOrbitron,
+      fontSize: '1.75rem',
     },
     h3: {
       fontFamily: fontsOrbitron,
@@ -473,6 +484,7 @@ const theme = createTheme({
     },
     button: {
       fontFamily: fontsOrbitron,
+      background: "#0C0F25",
     },
     caption: {
       fontFamily: fontsOrbitron,
