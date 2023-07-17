@@ -36,11 +36,27 @@ const fontsOrbitron = [
   ...fontsDefault,
 ].join(',');
 
-interface IndigoPalette extends PaletteOptions {
+interface HaikuPalette extends PaletteOptions {
   indigo?: ColorPartial;
+  deepPurple?: ColorPartial;
+  amber?: ColorPartial;
+  orange?: ColorPartial;
+  pink?: ColorPartial;
+  deepOrange?: ColorPartial;
+  green?: ColorPartial;
+  red?: ColorPartial;
+  lightgreen?: ColorPartial;
+  purple?: ColorPartial;
+  lime?: ColorPartial;
+  lightblue?: ColorPartial;
+  yellow?: ColorPartial;
+  cyan?: ColorPartial;
+  teal?: ColorPartial;
+  blue?: ColorPartial;
+  blueGrey?: ColorPartial;
 }
-interface IndigoTheme extends ThemeOptions {
-  palette?: IndigoPalette;
+interface HaikuTheme extends ThemeOptions {
+  palette?: HaikuPalette;
 }
 
 const theme = createTheme({
@@ -512,6 +528,7 @@ const theme = createTheme({
     },
     fontFamily: fontsCairo,
   },
-} as IndigoTheme);
+} as HaikuTheme);
 
 export default theme;
+export { HaikuTheme, HaikuPalette }

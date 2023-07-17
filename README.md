@@ -29,6 +29,16 @@ Update `tsconfig.json`. Add `"node_modules/common-mui-theme/**/*"` to the `inclu
 ```json
   "include": ["src", "node_modules/common-mui-theme/**/*"],
 ```
+
+Change `webpack.common.js` (Or any other config which executes TS). Change exclusion of `"node_modules"` in such way it doesn't affect `common-mui-theme`. For example:
+
+```javascripts
+{
+  test: /\.tsx?$/,
+  use: 'ts-loader',
+  exclude: /node_modules\/(?!(common-mui-theme)\/).*/,
+},
+```
       
 Wrap React root App with `ThemeProvider` with the imported `theme`:
 
