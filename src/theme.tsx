@@ -2,8 +2,8 @@ import React from "react";
 import { createTheme } from '@mui/material/styles';
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 import { LinkProps } from '@mui/material/Link';
-import {ColorPartial, PaletteOptions} from "@mui/material/styles/createPalette";
-import {ThemeOptions} from "@mui/material/styles/createTheme";
+import { ColorPartial, PaletteOptions } from "@mui/material/styles/createPalette";
+import { ThemeOptions } from "@mui/material/styles/createTheme";
 
 const LinkBehavior = React.forwardRef<
   HTMLAnchorElement,
