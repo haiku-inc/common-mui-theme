@@ -1,0 +1,17 @@
+# env
+.env
+
+# testing
+/coverage
+
+# dev
+/node_modules
+
+# production
+/dist
+/build
+/serve
+
+# misc
+.DS_Store
+/.idea
