@@ -531,4 +531,4 @@ const theme = createTheme({
 } as HaikuTheme);
 
 export default theme;
-export { HaikuTheme, HaikuPalette }
+export type { HaikuTheme, HaikuPalette }
