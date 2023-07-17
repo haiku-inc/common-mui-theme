@@ -16,6 +16,7 @@ Add dependency to `common-mui-theme` in a project `package.json`:
 ```json
 "common-mui-theme": "git+https://x-oauth-basic@github.com/haiku-inc/common-mui-theme.git#main"
 ```
+in this case to fetch new version of the theme use `npm update` command;
 
 or if you want to depend on exact version:
 ```json
