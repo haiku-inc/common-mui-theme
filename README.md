@@ -32,7 +32,7 @@ Update `tsconfig.json`. Add `"node_modules/common-mui-theme/**/*"` to the `inclu
 
 Change `webpack.common.js` (Or any other config which executes TS). Change exclusion of `"node_modules"` in such way it doesn't affect `common-mui-theme`. For example:
 
-```javascripts
+```js
 {
   test: /\.tsx?$/,
   use: 'ts-loader',
