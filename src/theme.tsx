@@ -484,6 +484,14 @@ const theme = createTheme({
         LinkComponent: LinkBehavior,
       },
     },
+    MuiAlert: {
+      styleOverrides: {
+        root: {
+          background: "rgba(6, 41, 55, 1)",
+          color: "rgba(184, 231, 251, 1)",
+        }
+      }
+    },
   },
   typography: {
     h1: {
