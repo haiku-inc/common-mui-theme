@@ -491,7 +491,6 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: fontsOrbitron,
-      fontSize: '1.75rem',
     },
     h3: {
       fontFamily: fontsOrbitron,
