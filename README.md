@@ -3,22 +3,25 @@
 Project contains Haiku MUI 5 theme.
 
 ## How to use
-                                  
+
 Create personal access token on the https://github.com/settings/tokens/new. Select `repo` scope.
 
 Run following command in any folder replacing `<your_token>` with your token from above step:
 
 `git config --global url."https://<your_token>:x-oauth-basic@github.com/".insteadOf https://x-oauth-basic@github.com/`
 
-This command will add URL rewrite to the `~/.gitconfig`, which will be used in the following step. 
+This command will add URL rewrite to the `~/.gitconfig`, which will be used in the following step.
 
 Add dependency to `common-mui-theme` in a project `package.json`:
+
 ```json
 "common-mui-theme": "git+https://x-oauth-basic@github.com/haiku-inc/common-mui-theme.git#main"
 ```
+
 in this case to fetch new version of the theme use `npm update` command;
 
 or if you want to depend on exact version:
+
 ```json
 "common-mui-theme": "git+https://x-oauth-basic@github.com/haiku-inc/common-mui-theme.git#0.0.3"
 ```
@@ -41,7 +44,7 @@ Change `webpack.common.js` (Or any other config which executes TS). Change exclu
   exclude: /node_modules\/(?!(common-mui-theme)\/).*/,
 },
 ```
-      
+
 Wrap React root App with `ThemeProvider` with the imported `theme`:
 
 ```jsx
@@ -54,8 +57,8 @@ root.render(
 );
 ```
 
-
 Add fonts to HTML template:
+
 ```html
 <link
   rel="stylesheet"

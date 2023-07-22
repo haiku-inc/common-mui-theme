@@ -11,5 +11,5 @@ const root = createRoot(domNode);
 root.render(
   <ThemeProvider theme={theme}>
     <App />
-  </ThemeProvider>
+  </ThemeProvider>,
 );

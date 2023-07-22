@@ -9,6 +9,9 @@ module.exports = {
   useTabs: false,
   semi: true,
   singleAttributePerLine: true,
-  plugins: ['prettier-plugin-organize-imports'],
+  plugins: ['prettier-plugin-organize-imports', '@trivago/prettier-plugin-sort-imports'],
   overrides: [{ files: '*.svg', options: { parser: 'html' } }],
+  importOrder: ['^@core/(.*)$', '^@server/(.*)$', '^@ui/(.*)$', '^[./]'],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
 };
