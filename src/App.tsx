@@ -1,8 +1,8 @@
 import Box from '@mui/material/Box';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import './styles.scss';
-
 import React, { FC } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import './styles.scss';
 import TypoSection from './TypoSection';
 
 const App: FC = () => {
