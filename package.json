@@ -4,14 +4,90 @@
   "version": "1.0.1",
   "private": true,
   "main": "./index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:haiku-inc/common-mui-theme.git"
+  },
+  "keywords": [
+    "ts",
+    "haiku"
+  ],
+  "files": [
+    "src/*",
+    "dist/*"
+  ],
+  "author": {
+    "name": "Kostiantyn Nazarenko",
+    "email": "const@nazarenko.es"
+  },
+  "homepage": "https://github.com/haiku-inc/common-mui-theme",
   "dependencies": {
+    "@mui/icons-material": "5.14.11",
     "@mui/material": "5.14.11"
   },
   "devDependencies": {
-    "typescript": "5.2.2"
+    "@emotion/react": "11.11.1",
+    "@emotion/styled": "11.11.0",
+    "dotenv": "16.3.1",
+    "clean-webpack-plugin": "4.0.0",
+    "copy-webpack-plugin": "11.0.0",
+    "css-loader": "6.8.1",
+    "html-webpack-plugin": "5.5.3",
+    "@types/react": "18.2.15",
+    "@types/react-dom": "18.2.7",
+    "@typescript-eslint/eslint-plugin": "6.0.0",
+    "@typescript-eslint/parser": "6.0.0",
+    "eslint": "8.45.0",
+    "eslint-config-prettier": "8.8.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.3",
+    "npm-check": "6.0.1",
+    "postcss": "8.4.26",
+    "postcss-loader": "7.3.3",
+    "postcss-preset-env": "9.0.0",
+    "prettier": "3.0.0",
+    "prettier-plugin-organize-imports": "3.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.14.2",
+    "style-loader": "3.3.3",
+    "sass": "1.63.6",
+    "sass-loader": "13.3.2",
+    "source-map-explorer": "2.5.3",
+    "source-map-loader": "4.0.1",
+    "tailwindcss": "3.3.3",
+    "ts-loader": "9.4.4",
+    "typescript": "5.2.2",
+    "webpack": "5.88.1",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "4.15.1",
+    "webpack-merge": "5.9.0"
   },
   "peerDependencies": {
     "react": ">=18",
     "react-router-dom": ">=6"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "compile": "tsc -p .",
+    "posttest": "npm run check-types",
+    "predeploy": "npm run build",
+    "prepare": "npm update && npm run compile && husky install",
+    "pretest": "npm run compile",
+    "start": "webpack serve --config webpack.dev.js",
+    "test": "npm run compile",
+    "update-interactive": "npm-check --update --save-exact",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "lint-staged": "lint-staged",
+    "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
+    "prettier": "prettier --check src/ ./package.json ./README.md",
+    "prettier:fix": "prettier --write --ignore-unknown src/ ./package.json ./README.md"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{css,scss,md}": "prettier --write"
   }
 }

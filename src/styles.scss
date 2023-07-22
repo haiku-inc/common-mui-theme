@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+body {
+  font-family: Cairo, sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --clr-bg: #030724;
+  --clr-bg-2: #13162b;
+  --clr-bg-3: #171b35;
+  --clr-highlight: #d0f83e;
+  --clr-under-headings: #00f2e4;
+  --clr-font-main: #fff;
+  --clr-font-active: #ccc;
+  --clr-font-highlight: #d0f83e;
+  --clr-font-dark: #202020;
+  --clr-odd-1: #e92a67;
+  --clr-odd-2: #a853ba;
+  --clr-odd-3: #2a8af6;
+  --clr-odd-4: rgb(42 138 246 / 0%);
+}
+
+body {
+  background: var(--clr-bg);
+  color: var(--clr-font-main);
+  margin: 0;
+  padding: 0;
+}
