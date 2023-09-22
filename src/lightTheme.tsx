@@ -366,16 +366,6 @@ const lightTheme = createTheme({
         component: LinkBehavior,
       } as LinkProps,
     },
-    MuiTab: {
-      styleOverrides: {
-        root: {
-          background: "rgba(0, 0, 0, 0.2)",
-          "&:hover": {
-            background: "rgba(0, 0, 0, 0.25)",
-          },
-        },
-      },
-    },
     MuiButtonBase: {
       defaultProps: {
         LinkComponent: LinkBehavior,

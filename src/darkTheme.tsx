@@ -355,16 +355,6 @@ const darkTheme = createTheme({
         },
       },
     },
-    MuiTab: {
-      styleOverrides: {
-        root: {
-          background: "#0C0F25",
-          "&:hover": {
-            background: "#0F1C28",
-          },
-        },
-      },
-    },
     MuiLink: {
       defaultProps: {
         component: LinkBehavior,
