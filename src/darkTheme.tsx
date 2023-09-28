@@ -1,6 +1,6 @@
 import { LinkProps } from "@mui/material/Link";
 import { createTheme } from "@mui/material/styles";
-import { fontsCairo, fontsOrbitron, HaikuTheme, LinkBehavior } from "./common";
+import { fontsOpenSans, fontsRajdhani, HaikuTheme, LinkBehavior} from "./common";
 
 const darkTheme = createTheme({
   palette: {
@@ -25,10 +25,14 @@ const darkTheme = createTheme({
     action: {
       active: "rgba(255, 255, 255, 0.56)",
       hover: "rgba(255, 255, 255, 0.08)",
+      hoverOpacity: 0.08,
       selected: "rgba(255, 255, 255, 0.16)",
-      disabledBackground: "rgba(255, 255, 255, 0.12)",
-      focus: "rgba(255, 255, 255, 0.12)",
+      selectedOpacity: 0.16,
       disabled: "rgba(255, 255, 255, 0.38)",
+      disabledBackground: "rgba(255, 255, 255, 0.12)",
+      disabledOpacity: 0.12,
+      focus: "rgba(255, 255, 255, 0.12)",
+      focusOpacity: 0.12,
     },
     error: {
       main: "rgba(244, 67, 54, 1)",
@@ -376,45 +380,89 @@ const darkTheme = createTheme({
   },
   typography: {
     h1: {
-      fontFamily: fontsOrbitron,
+      fontSize: 96,
+      fontFamily: fontsRajdhani,
+      paragraphIndent: 0,
+      paragraphSpacing: 0,
+      fontWeight: 600,
     },
     h2: {
-      fontFamily: fontsOrbitron,
+      fontSize: 60,
+      fontFamily: fontsRajdhani,
+      paragraphIndent: 0,
+      paragraphSpacing: 0,
+      fontWeight: 600,
     },
     h3: {
-      fontFamily: fontsOrbitron,
+      fontSize: 48,
+      fontFamily: fontsRajdhani,
+      paragraphIndent: 0,
+      paragraphSpacing: 0,
+      fontWeight: 400,
     },
     h4: {
-      fontFamily: fontsOrbitron,
+      fontSize: 34,
+      fontFamily: fontsRajdhani,
+      paragraphIndent: 0,
+      paragraphSpacing: 0,
+      fontWeight: 500,
     },
     h5: {
-      fontFamily: fontsOrbitron,
+      fontSize: 24,
+      fontFamily: fontsRajdhani,
+      paragraphIndent: 0,
+      paragraphSpacing: 0,
+      fontWeight: 500,
     },
     h6: {
-      fontFamily: fontsOrbitron,
-    },
-    subtitle1: {
-      // fontFamily: fontsCairo,
-    },
-    subtitle2: {
-      // fontFamily: fontsCairo,
+      fontSize: 20,
+      fontFamily: fontsRajdhani,
+      paragraphIndent: 0,
+      paragraphSpacing: 0,
+      fontWeight: 500,
     },
     body1: {
-      // fontFamily: fontsCairo,
+      fontSize: 16,
+      fontFamily: fontsOpenSans,
+      paragraphIndent: 0,
+      paragraphSpacing: 0,
+      fontWeight: 400,
     },
     body2: {
-      // fontFamily: fontsCairo,
+      fontSize: 14,
+      fontFamily: fontsOpenSans,
+      paragraphIndent: 0,
+      paragraphSpacing: 0,
+      fontWeight: 400,
     },
-    button: {
-      fontFamily: fontsOrbitron,
+    subtitle1: {
+      fontSize: 16,
+      fontFamily: fontsOpenSans,
+      paragraphIndent: 0,
+      paragraphSpacing: 0,
+      fontWeight: 700,
     },
-    caption: {
-      fontFamily: fontsOrbitron,
+    subtitle2: {
+      fontSize: 14,
+      fontFamily: fontsOpenSans,
+      paragraphIndent: 0,
+      paragraphSpacing: 0,
+      fontWeight: 700,
     },
     overline: {
-      fontFamily: fontsOrbitron,
+      fontSize: 12,
+      fontFamily: fontsOpenSans,
+      fontWeight: 400,
     },
-    fontFamily: fontsCairo,
+    caption: {
+      fontSize: 12,
+      fontFamily: fontsOpenSans,
+      fontWeight: 400,
+    },
+    button: {
+      fontFamily: fontsRajdhani,
+      fontWeight: 600,
+    },
   },
 } as HaikuTheme);
 
