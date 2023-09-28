@@ -46,10 +46,6 @@ const fontsDefault = [
   '"Segoe UI Symbol"',
 ];
 
-export const fontsCairo = ["Cairo", ...fontsDefault].join(",");
-
-export const fontsOrbitron = ["Orbitron", ...fontsDefault].join(",");
-
 export const fontsRajdhani = ["Rajdhani", ...fontsDefault].join(",");
 
 export const fontsOpenSans = ["Open Sans", ...fontsDefault].join(",");

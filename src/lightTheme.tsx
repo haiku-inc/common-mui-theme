@@ -31,10 +31,14 @@ const lightTheme = createTheme({
     action: {
       active: "rgba(0, 0, 0, 0.56)",
       hover: "rgba(0, 0, 0, 0.08)",
+      hoverOpacity: 0.08,
       selected: "rgba(0, 0, 0, 0.16)",
-      disabledBackground: "rgba(0, 0, 0, 0.12)",
-      focus: "rgba(0, 0, 0, 0.12)",
+      selectedOpacity: 0.16,
       disabled: "rgba(0, 0, 0, 0.38)",
+      disabledBackground: "rgba(0, 0, 0, 0.12)",
+      disabledOpacity: 0.12,
+      focus: "rgba(0, 0, 0, 0.12)",
+      focusOpacity: 0.12,
     },
     error: {
       main: "rgba(244, 67, 54, 1)",
