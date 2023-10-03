@@ -1,14 +1,14 @@
 {
   "name": "common-mui-theme",
   "description": "Haiku MUI 5 theme which should be used in the ThemeProvider",
-  "version": "0.0.6",
+  "version": "1.0.1",
   "private": true,
   "main": "./index.ts",
   "dependencies": {
-    "@mui/material": "5.13.6"
+    "@mui/material": "5.14.11"
   },
   "devDependencies": {
-    "typescript": "5.1.6"
+    "typescript": "5.2.2"
   },
   "peerDependencies": {
     "react": ">=18",
