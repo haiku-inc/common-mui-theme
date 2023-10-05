@@ -1,13 +1,7 @@
-import * as React from "react";
-import {
-  Link as RouterLink,
-  LinkProps as RouterLinkProps,
-} from "react-router-dom";
-import {
-  ColorPartial,
-  PaletteOptions,
-} from "@mui/material/styles/createPalette";
-import { ThemeOptions } from "@mui/material/styles/createTheme";
+import * as React from 'react';
+import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
+import { ColorPartial, PaletteOptions } from '@mui/material/styles/createPalette';
+import { ThemeOptions } from '@mui/material/styles/createTheme';
 
 interface HaikuPalette extends PaletteOptions {
   indigo?: ColorPartial;
@@ -34,25 +28,25 @@ interface HaikuTheme extends ThemeOptions {
 }
 
 const fontsDefault = [
-  "-apple-system",
-  "BlinkMacSystemFont",
+  '-apple-system',
+  'BlinkMacSystemFont',
   '"Segoe UI"',
-  "Roboto",
+  'Roboto',
   '"Helvetica Neue"',
-  "Arial",
-  "sans-serif",
+  'Arial',
+  'sans-serif',
   '"Apple Color Emoji"',
   '"Segoe UI Emoji"',
   '"Segoe UI Symbol"',
 ];
 
-export const fontsRajdhani = ["Rajdhani", ...fontsDefault].join(",");
+export const fontsRajdhani = ['Rajdhani', ...fontsDefault].join(',');
 
-export const fontsOpenSans = ["Open Sans", ...fontsDefault].join(",");
+export const fontsOpenSans = ['Open Sans', ...fontsDefault].join(',');
 
 export const LinkBehavior = React.forwardRef<
   HTMLAnchorElement,
-  Omit<RouterLinkProps, "to"> & { href: RouterLinkProps["to"] }
+  Omit<RouterLinkProps, 'to'> & { href: RouterLinkProps['to'] }
 >((props, ref) => {
   const { href, ...other } = props;
   // Map href (Material UI) -> to (react-router)
