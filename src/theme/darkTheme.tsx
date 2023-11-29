@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-import { HaikuTheme, defaultPalette } from './common';
+import { defaultPalette } from './common';
 
 const darkTheme = createTheme({
   ...defaultPalette,
@@ -65,6 +65,6 @@ const darkTheme = createTheme({
       paper: 'rgba(1, 5, 34, 1)',
     },
   },
-} as HaikuTheme);
+});
 
 export default darkTheme;

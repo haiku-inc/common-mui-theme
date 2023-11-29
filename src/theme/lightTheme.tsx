@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-import { HaikuTheme, defaultPalette } from './common';
+import { defaultPalette } from './common';
 
 const lightTheme = createTheme({
   ...defaultPalette,
@@ -63,10 +63,8 @@ const lightTheme = createTheme({
     background: {
       default: 'rgb(244, 244, 244)',
       paper: 'rgb(249, 249, 249)',
-      'paper-elevation-0': 'rgb(249, 249, 249)',
-      'paper-elevation-1': 'rgb(249, 249, 249)',
     },
   },
-} as HaikuTheme);
+});
 
 export default lightTheme;
