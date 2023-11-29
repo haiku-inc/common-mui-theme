@@ -1,4 +1,4 @@
-import { Alert, Box, Typography } from '@mui/material';
+import { Alert, Box, Button, Typography } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -10,53 +10,71 @@ import * as React from 'react';
 
 const TypoSection = () => (
   <Box className="flex flex-col gap-5 mt-0 mb-96 p-10">
-    <Box className="flex gap-5">
-      <Alert
-        severity="info"
-        className="max-w-[550px]"
-      >
-        <strong>Mobile-play not yet supported</strong>
-        <p>
-          Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
-          game process on mobile.
-        </p>
-      </Alert>
+    <Alerts />
 
-      <Alert
-        severity="success"
-        className="max-w-[550px]"
-      >
-        <strong>Mobile-play not yet supported</strong>
-        <p>
-          Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
-          game process on mobile.
-        </p>
-      </Alert>
-
-      <Alert
-        severity="warning"
-        className="max-w-[550px]"
-      >
-        <strong>Mobile-play not yet supported</strong>
-        <p>
-          Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
-          game process on mobile.
-        </p>
-      </Alert>
-
-      <Alert
-        severity="error"
-        className="max-w-[550px]"
-      >
-        <strong>Mobile-play not yet supported</strong>
-        <p>
-          Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
-          game process on mobile.
-        </p>
-      </Alert>
-    </Box>
+    <Buttons />
 
     <FontsTable />
+  </Box>
+);
+
+const Buttons = () => (
+  <Box className="flex gap-5">
+    <Button>Simple button</Button>
+    <Button
+      variant="contained"
+      type="button"
+    >
+      Contained button
+    </Button>
+  </Box>
+);
+
+const Alerts = () => (
+  <Box className="flex gap-5">
+    <Alert
+      severity="info"
+      className="max-w-[550px]"
+    >
+      <strong>Mobile-play not yet supported</strong>
+      <p>
+        Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
+        game process on mobile.
+      </p>
+    </Alert>
+
+    <Alert
+      severity="success"
+      className="max-w-[550px]"
+    >
+      <strong>Mobile-play not yet supported</strong>
+      <p>
+        Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
+        game process on mobile.
+      </p>
+    </Alert>
+
+    <Alert
+      severity="warning"
+      className="max-w-[550px]"
+    >
+      <strong>Mobile-play not yet supported</strong>
+      <p>
+        Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
+        game process on mobile.
+      </p>
+    </Alert>
+
+    <Alert
+      severity="error"
+      className="max-w-[550px]"
+    >
+      <strong>Mobile-play not yet supported</strong>
+      <p>
+        Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
+        game process on mobile.
+      </p>
+    </Alert>
   </Box>
 );
 

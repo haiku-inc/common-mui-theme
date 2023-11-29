@@ -8,13 +8,13 @@ const lightTheme = createTheme({
     ...defaultPalette.palette,
     mode: 'light',
     text: {
-      primary: 'rgba(11, 11, 11)',
+      primary: '#0B0B0B',
       secondary: 'rgba(11 ,11, 11, 0.7)',
       disabled: 'rgba(0, 0, 0, 0.38)',
     },
     primary: {
-      main: '#00B7AC',
-      dark: 'rgba(10, 96, 92, 1)',
+      main: '#0A605C',
+      dark: '#004a41',
       light: 'rgba(230, 255, 255, 1)',
       contrastText: 'rgba(255, 255, 255, 0.87)',
     },
