@@ -25,6 +25,7 @@ or if you want to depend on exact version:
 ```json
 "common-mui-theme": "git+https://x-oauth-basic@github.com/haiku-inc/common-mui-theme.git#0.0.3"
 ```
+
 Note: you have to have a corresponding tag for this to be working propely.
 
 Now you can run `npm install`, which should install private repository `common-mui-theme`. Later you need to use `npm update` even after updating the tag version, because this dependency is not semver.
