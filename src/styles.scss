@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@mixin light-theme {
+  --clr-bg: #f4f4f5;
+  --clr-border: #0a605c;
+  --clr-bg-3: rgb(35 38 59 / 4%);
+  --clr-highlight: #00b7ac;
+  --clr-under-headings: #0a605c;
+  --clr-font-main: #0b0b0b;
+  --clr-font-faded: #0b0b0b44;
+  --clr-font-active: #ccc;
+  --clr-font-highlight: #00b7ac;
+  --clr-font-dark: #202020;
+  --clr-odd-1: #e92a67;
+  --clr-odd-2: #a853ba;
+  --clr-odd-3: #2a8af6;
+  --clr-odd-4: rgb(42 138 246 / 0%);
+  --footer-background: linear-gradient(
+    0deg,
+    rgb(255 255 255 / 10%) 0%,
+    rgb(35 38 59 / 8.53%) 99.99%,
+    rgb(255 255 255 / 6%) 100%
+  );
+}
+
+@mixin dark-theme {
+  --clr-bg: #030724;
+  --clr-border: #13162b;
+  --clr-bg-3: #0f132e;
+  --clr-highlight: #d0f83e;
+  --clr-under-headings: #00f2e4;
+  --clr-font-main: #fff;
+  --clr-font-faded: #fff3;
+  --clr-font-active: #ccc;
+  --clr-font-highlight: #d0f83e;
+  --clr-font-dark: #202020;
+  --clr-odd-1: #e92a67;
+  --clr-odd-2: #a853ba;
+  --clr-odd-3: #2a8af6;
+  --clr-odd-4: rgb(42 138 246 / 0%);
+  --footer-background: linear-gradient(180deg, rgb(34 37 63 / 60%) 0%, rgb(34 37 63 / 10%) 100%);
+}
+
+:root,
+body {
+  font-size: 16px;
+}
+
+:root.light {
+  @include light-theme;
+}
+
+:root.dark {
+  @include dark-theme;
+}
+
+// OS Default.
+:root:not(.light, .dark) {
+  @media (prefers-color-scheme: light) {
+    @include light-theme;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme;
+  }
+}
+
+:root,
+body {
+  font-family: Cairo, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background: var(--clr-bg);
+  color: var(--clr-font-main);
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  color: #fff;
+  text-align: center;
+  font-family: Orbitron, sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 0.583px;
+
+  h1.logo {
+    margin-right: 0.75rem;
+    padding: 0;
+    color: var(--clr-font-main);
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+    transition: transform 2ms linear 2s;
+    contain: paint;
+    width: 99px;
+    height: 24px;
+    background-image: url('./images/logo.png');
+    background-size: cover;
+
+    &:hover {
+      animation: 0.5s linear 1.5s shake;
+      filter: drop-shadow(1px 1px 1px red);
+    }
+  }
+}
