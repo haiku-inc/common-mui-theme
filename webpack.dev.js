@@ -1,14 +1,17 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
 const webpack = require('webpack');
 const path = require('path');
 require('dotenv').config({ path: './.env.dev' });
 
-module.exports = merge(common, {
+module.exports = {
+  target: 'web',
+  devtool: 'source-map',
   mode: 'development',
   entry: {
-    index: './src/index.tsx',
+    index: './src/localdev.tsx',
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.json', '.css', '.scss'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -28,6 +31,18 @@ module.exports = merge(common, {
   ],
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(jpe?g|gif|png|wav|mp3)$/i,
+        type: 'asset/resource',
+      },
       {
         test: /\.(sa|sc|c)ss$/,
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
@@ -51,4 +66,4 @@ module.exports = merge(common, {
     open: true,
     port: 3005,
   },
-});
+};
