@@ -2,13 +2,19 @@ import React, { createContext, useCallback, useContext, useEffect } from 'react'
 
 import './styles.scss';
 
-export const ThemeContext = createContext<{
-  theme: 'light' | 'dark' | 'os-default';
-  setTheme: React.Dispatch<React.SetStateAction<'light' | 'dark' | 'os-default'>>;
-}>(null);
-export const ThemeExplicitContext = createContext(null);
+export type ExplicitThemeType = 'light' | 'dark';
+export type ThemeType = ExplicitThemeType | 'os-default';
 
-export const detectInitialTheme = (): 'light' | 'dark' | 'os-default' => {
+export const ThemeContext = createContext<{
+  theme: ThemeType;
+  setTheme: React.Dispatch<React.SetStateAction<ThemeType>>;
+}>(null);
+export const ThemeExplicitContext = createContext<{
+  themeExplicit: ExplicitThemeType;
+  setThemeExplicit: React.Dispatch<React.SetStateAction<ExplicitThemeType>>;
+}>(null);
+
+export const detectInitialTheme = (): ThemeType => {
   const storedValue = localStorage.getItem('theme');
   if (storedValue && (storedValue === 'light' || storedValue === 'dark')) {
     document.documentElement.className = storedValue;
@@ -16,9 +22,10 @@ export const detectInitialTheme = (): 'light' | 'dark' | 'os-default' => {
   }
   return 'os-default';
 };
-export const detectOSTheme = (): string =>
+export const detectOSTheme = (): ExplicitThemeType =>
   window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-export const detectThemeExplicit = (theme: string): string => (theme !== 'os-default' ? theme : detectOSTheme());
+export const detectThemeExplicit = (theme: ThemeType): ExplicitThemeType =>
+  theme !== 'os-default' ? theme : detectOSTheme();
 
 export function ThemeToggle() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -42,7 +49,7 @@ export function ThemeToggle() {
   const handleClick = useCallback(() => {
     const isOSDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-    const switchTo = (side: 'dark' | 'light' | 'os-default') => {
+    const switchTo = (side: ThemeType) => {
       setTheme(side);
       setThemeExplicit(detectThemeExplicit(side));
       document.documentElement.className = side;

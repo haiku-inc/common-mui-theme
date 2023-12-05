@@ -4,9 +4,11 @@ import React, { FC, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import {
+  ExplicitThemeType,
   ThemeContext,
   ThemeExplicitContext,
   ThemeToggle,
+  ThemeType,
   detectInitialTheme,
   detectThemeExplicit,
 } from './ThemeToggle';
@@ -16,8 +18,8 @@ import darkTheme from './theme/darkTheme';
 import lightTheme from './theme/lightTheme';
 
 const App: FC = () => {
-  const [theme, setTheme] = useState<'light' | 'dark' | 'os-default'>(detectInitialTheme());
-  const [themeExplicit, setThemeExplicit] = useState(detectThemeExplicit(theme));
+  const [theme, setTheme] = useState<ThemeType>(detectInitialTheme());
+  const [themeExplicit, setThemeExplicit] = useState<ExplicitThemeType>(detectThemeExplicit(theme));
 
   return (
     <ThemeExplicitContext.Provider value={{ themeExplicit, setThemeExplicit }}>
