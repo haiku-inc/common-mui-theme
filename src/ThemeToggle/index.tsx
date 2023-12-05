@@ -85,6 +85,10 @@ export function ThemeToggle() {
         height="24"
         viewBox="0 0 24 24"
       >
+        <path
+          className="stars"
+          d="M 9.268 3.728 L 6.738 5.668 L 7.648 8.728 L 5.018 6.918 L 2.388 8.728 L 3.298 5.668 L 0.768 3.728 L 3.958 3.638 L 5.018 0.638 L 6.078 3.638 L 9.268 3.728 Z M 12.768 10.638 L 11.128 11.888 L 11.718 13.868 L 10.018 12.698 L 8.318 13.868 L 8.908 11.888 L 7.268 10.638 L 9.328 10.588 L 10.018 8.638 L 10.708 10.588 L 12.768 10.638 Z"
+        />
         <mask
           className="moon"
           id="moon-mask"
@@ -109,12 +113,8 @@ export function ThemeToggle() {
           cy="12"
           r="6"
           mask="url(#moon-mask)"
-          fill="currentColor"
         />
-        <g
-          className="sun-beams-left"
-          stroke="currentColor"
-        >
+        <g className="sun-beams-left">
           <line
             x1="12"
             y1="1"
@@ -146,10 +146,7 @@ export function ThemeToggle() {
             y2="23"
           />
         </g>
-        <g
-          className="sun-beams-right"
-          stroke="currentColor"
-        >
+        <g className="sun-beams-right">
           <line
             x1="18.36"
             y1="18.36"
