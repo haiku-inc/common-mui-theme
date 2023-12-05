@@ -25,12 +25,7 @@ const App: FC = () => {
     <ThemeExplicitContext.Provider value={{ themeExplicit, setThemeExplicit }}>
       <ThemeContext.Provider value={{ theme, setTheme }}>
         <ThemeProvider theme={themeExplicit === 'light' ? lightTheme : darkTheme}>
-          <AppBar
-            component="nav"
-            position="static"
-            color="default"
-            sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
-          >
+          <AppBar component="nav" position="static" color="default" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
             <Toolbar className="grow">
               <Box className="grow flex gap-[30px] items-center">
                 <h1 className="logo">Haiku inc.</h1>
@@ -42,10 +37,7 @@ const App: FC = () => {
           <BrowserRouter>
             <Box className="flex">
               <Routes>
-                <Route
-                  path="/"
-                  element={<TypoSection />}
-                />
+                <Route path="/" element={<TypoSection />} />
               </Routes>
             </Box>
           </BrowserRouter>
