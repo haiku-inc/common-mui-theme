@@ -3,7 +3,7 @@ import React, { createContext, useCallback, useContext, useEffect } from 'react'
 import './styles.scss';
 
 export type ExplicitThemeType = 'light' | 'dark';
-export type ThemeType = ExplicitThemeType | 'os-default';
+export type ThemeType = ExplicitThemeType | 'os-defined';
 
 export const ThemeContext = createContext<{
   theme: ThemeType;
@@ -20,12 +20,12 @@ export const detectInitialTheme = (): ThemeType => {
     document.documentElement.className = storedValue;
     return storedValue;
   }
-  return 'os-default';
+  return 'os-defined';
 };
 export const detectOSTheme = (): ExplicitThemeType =>
   window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 export const detectThemeExplicit = (theme: ThemeType): ExplicitThemeType =>
-  theme !== 'os-default' ? theme : detectOSTheme();
+  theme !== 'os-defined' ? theme : detectOSTheme();
 
 export function ThemeToggle() {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -33,7 +33,7 @@ export function ThemeToggle() {
   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
   const themeChange = useCallback(({ matches }) => {
-    if (document.documentElement.className === 'os-default') {
+    if (document.documentElement.className === 'os-defined') {
       setThemeExplicit(matches ? 'dark' : 'light');
     }
   }, []);
@@ -53,19 +53,19 @@ export function ThemeToggle() {
       setTheme(side);
       setThemeExplicit(detectThemeExplicit(side));
       document.documentElement.className = side;
-      if (side !== 'os-default') {
+      if (side !== 'os-defined') {
         localStorage.setItem('theme', side);
       } else {
         localStorage.removeItem('theme');
       }
     };
 
-    if (theme === 'os-default') {
+    if (theme === 'os-defined') {
       switchTo(isOSDark ? 'light' : 'dark');
     } else if (theme === 'dark') {
-      switchTo(isOSDark ? 'os-default' : 'light');
+      switchTo(isOSDark ? 'os-defined' : 'light');
     } else if (theme === 'light') {
-      switchTo(isOSDark ? 'dark' : 'os-default');
+      switchTo(isOSDark ? 'dark' : 'os-defined');
     }
   }, [theme]);
 
