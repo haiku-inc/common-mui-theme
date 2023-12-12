@@ -21,10 +21,7 @@ const TypoSection = () => (
 const Buttons = () => (
   <Box className="flex gap-5">
     <Button>Simple button</Button>
-    <Button
-      variant="contained"
-      type="button"
-    >
+    <Button variant="contained" type="button">
       Contained button
     </Button>
   </Box>
@@ -32,10 +29,7 @@ const Buttons = () => (
 
 const Alerts = () => (
   <Box className="flex gap-5">
-    <Alert
-      severity="info"
-      className="max-w-[550px]"
-    >
+    <Alert severity="info" className="max-w-[550px]">
       <strong>Mobile-play not yet supported</strong>
       <p>
         Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
@@ -43,10 +37,7 @@ const Alerts = () => (
       </p>
     </Alert>
 
-    <Alert
-      severity="success"
-      className="max-w-[550px]"
-    >
+    <Alert severity="success" className="max-w-[550px]">
       <strong>Mobile-play not yet supported</strong>
       <p>
         Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
@@ -54,10 +45,7 @@ const Alerts = () => (
       </p>
     </Alert>
 
-    <Alert
-      severity="warning"
-      className="max-w-[550px]"
-    >
+    <Alert severity="warning" className="max-w-[550px]">
       <strong>Mobile-play not yet supported</strong>
       <p>
         Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
@@ -65,10 +53,7 @@ const Alerts = () => (
       </p>
     </Alert>
 
-    <Alert
-      severity="error"
-      className="max-w-[550px]"
-    >
+    <Alert severity="error" className="max-w-[550px]">
       <strong>Mobile-play not yet supported</strong>
       <p>
         Please note while the World of Haiku game is not yet mobile-friendly, you can still sign up and purchase the
@@ -80,10 +65,7 @@ const Alerts = () => (
 
 const FontsTable = () => (
   <TableContainer component={Paper}>
-    <Table
-      sx={{ minWidth: 650 }}
-      aria-label="simple table"
-    >
+    <Table sx={{ minWidth: 650 }} aria-label="simple table">
       <TableHead>
         <TableRow>
           <TableCell>Style</TableCell>
@@ -93,148 +75,91 @@ const FontsTable = () => (
       </TableHead>
       <TableBody>
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
-            <Typography
-              component="h1"
-              variant="h1"
-            >
+          <TableCell component="th" scope="row">
+            <Typography component="h1" variant="h1">
               h1
             </Typography>
           </TableCell>
           <TableCell>96</TableCell>
           <TableCell>
-            <Typography
-              component="h1"
-              variant="h1"
-            >
+            <Typography component="h1" variant="h1">
               Typography
             </Typography>
           </TableCell>
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
-            <Typography
-              component="h2"
-              variant="h2"
-            >
+          <TableCell component="th" scope="row">
+            <Typography component="h2" variant="h2">
               h2
             </Typography>
           </TableCell>
           <TableCell>60</TableCell>
           <TableCell>
-            <Typography
-              component="h2"
-              variant="h2"
-            >
+            <Typography component="h2" variant="h2">
               Typography
             </Typography>
           </TableCell>
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
-            <Typography
-              component="h3"
-              variant="h3"
-            >
+          <TableCell component="th" scope="row">
+            <Typography component="h3" variant="h3">
               h3
             </Typography>
           </TableCell>
           <TableCell>48</TableCell>
           <TableCell>
-            <Typography
-              component="h3"
-              variant="h3"
-            >
+            <Typography component="h3" variant="h3">
               Typography
             </Typography>
           </TableCell>
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
-            <Typography
-              component="h4"
-              variant="h4"
-            >
+          <TableCell component="th" scope="row">
+            <Typography component="h4" variant="h4">
               h4
             </Typography>
           </TableCell>
           <TableCell>34</TableCell>
           <TableCell>
-            <Typography
-              component="h4"
-              variant="h4"
-            >
+            <Typography component="h4" variant="h4">
               Typography
             </Typography>
           </TableCell>
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
-            <Typography
-              component="h5"
-              variant="h5"
-            >
+          <TableCell component="th" scope="row">
+            <Typography component="h5" variant="h5">
               h5
             </Typography>
           </TableCell>
           <TableCell>24</TableCell>
           <TableCell>
-            <Typography
-              component="h5"
-              variant="h5"
-            >
+            <Typography component="h5" variant="h5">
               Typography
             </Typography>
           </TableCell>
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
-            <Typography
-              component="h6"
-              variant="h6"
-            >
+          <TableCell component="th" scope="row">
+            <Typography component="h6" variant="h6">
               h6
             </Typography>
           </TableCell>
           <TableCell>20</TableCell>
           <TableCell>
-            <Typography
-              component="h6"
-              variant="h6"
-            >
+            <Typography component="h6" variant="h6">
               Typography
             </Typography>
           </TableCell>
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
+          <TableCell component="th" scope="row">
             <Typography variant="subtitle1">subtitle1</Typography>
           </TableCell>
           <TableCell>16</TableCell>
@@ -244,10 +169,7 @@ const FontsTable = () => (
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
+          <TableCell component="th" scope="row">
             <Typography variant="subtitle2">subtitle2</Typography>
           </TableCell>
           <TableCell>14</TableCell>
@@ -257,10 +179,7 @@ const FontsTable = () => (
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
+          <TableCell component="th" scope="row">
             <Typography variant="body1">body1</Typography>
           </TableCell>
           <TableCell>16</TableCell>
@@ -270,10 +189,7 @@ const FontsTable = () => (
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
+          <TableCell component="th" scope="row">
             <Typography variant="body2">body2</Typography>
           </TableCell>
           <TableCell>14</TableCell>
@@ -283,10 +199,7 @@ const FontsTable = () => (
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
+          <TableCell component="th" scope="row">
             <Typography variant="caption">caption</Typography>
           </TableCell>
           <TableCell>12</TableCell>
@@ -296,10 +209,7 @@ const FontsTable = () => (
         </TableRow>
 
         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-          <TableCell
-            component="th"
-            scope="row"
-          >
+          <TableCell component="th" scope="row">
             <Typography variant="overline">overline</Typography>
           </TableCell>
           <TableCell>12</TableCell>
